@@ -95,17 +95,15 @@ HistoryBtn.addEventListener('click', function () {
     HistoryBtn.classList.remove('text-gray-500');
     DonationBtn.classList.remove('bg-lightgreen');
 
-    document.getElementById('Donation-title').classList.add('hidden')
-    document.getElementById('History-title-1').classList.remove('hidden')
-    document.getElementById('History-title-2').classList.remove('hidden')
-    document.getElementById('History-title-3').classList.remove('hidden')
+    document.getElementById('Donation-title').classList.add('hidden');
+    document.getElementById('History-title').classList.remove('hidden')
 })
 DonationBtn.addEventListener('click', function(){
     DonationBtn.classList.add('bg-lightgreen');
     DonationBtn.classList.remove('text-gray-500');
     HistoryBtn.classList.remove('bg-lightgreen');
-    document.getElementById('Donation-title').classList.remove('hidden')
     document.getElementById('History-title').classList.add('hidden')
+    document.getElementById('Donation-title').classList.remove('hidden')
 })
 
 
