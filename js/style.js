@@ -1,10 +1,17 @@
+const navbar = document.getElementById('navbar');
+    window.onscroll = function () {
+        if (window.scrollY > 50) {
+            navbar.classList.remove('bg-light');           
+        } else {
+        navbar.classList.add('bg-light');
+    }};
 document.getElementById('blog-btn').addEventListener('click',function(){
     window.location.href= 'home.html'
 })
 
-
 document.getElementById('card-btn').addEventListener('click', function () {
     const inputOne = getInputValueById('input-one');
+    
     document.getElementById('take').innerText =inputOne;
     const donateBalanceOne = getBalanceValueById('donate-balance-one');
     const newBalance = donateBalanceOne + inputOne;
@@ -20,7 +27,6 @@ document.getElementById('card-btn').addEventListener('click', function () {
         modal.classList.add('hidden')
     }
     const historyContainer = document.getElementById('History-title-1');
-    console.log('felkfj')
     historyContainer.innerHTML =`
     <div class="border p-8 space-y-4 rounded-2xl mt-6 ">
      <h3 class="text-xl font-bold"> ${inputOne} Taka is Donated for famine-2024 at Feni, Bangladesh</h3>
@@ -51,7 +57,7 @@ document.getElementById('card-btn-two').addEventListener('click', function (){
     const historyContainer = document.getElementById('History-title-2');
     historyContainer.innerHTML = `  
     <div class="border p-8 space-y-4 rounded-2xl mt-6">
-    <h3 class="text-xl font-bold">${inputTwo} Taka is Donated for Flood Relief in Feni,Bangladesh</h3>
+    <h3 class="text-xl font-bold">${inputTwo} Taka is Donated for Flood Relief in Noakhali,Bangladesh</h3>
     <p> Date: ${new Date().toDateString()}</P>
     </div>
     `  
@@ -62,7 +68,6 @@ document.getElementById('card-btn-3').addEventListener('click', function () {
     const donateBalanceThree = getBalanceValueById('donate-balance-three')
     const newBalanceThree = donateBalanceThree + inputThree;
     document.getElementById('donate-balance-three').innerText = newBalanceThree;
-    console.log(newBalanceThree)
     const totalBalanceThree = getBalanceValueById('total-balance')
     const newTotalBalanceThree = totalBalanceThree - inputThree;
 
