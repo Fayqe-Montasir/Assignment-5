@@ -2,7 +2,6 @@ const navbar = document.getElementById('navbar');
 window.onscroll = function () {
     if (window.scrollY > 50) {
         navbar.classList.remove('bg-light');
-        navbar.classList.add('bg-light/10')
         return navbar;
 
     } else {
